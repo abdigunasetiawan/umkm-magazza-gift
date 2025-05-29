@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // <-- Tambahkan ini
 
 const BestSeller = () => {
   const [products, setProducts] = useState([]);
@@ -15,27 +14,16 @@ const BestSeller = () => {
       .catch((err) => console.error("Gagal memuat data:", err));
   }, []);
 
-  // Fungsi untuk menjadikan nama produk URL-friendly
-  const slugify = (text) =>
-    text
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]+/g, "");
-
   return (
     <div className="mx-auto mt-4 max-w-screen-xl p-4">
       <div className="text-center">
         <h1 className="text-cerise-500 text-3xl font-bold">Best Seller</h1>
-        <p className="mt-2 dark:text-white">Limited availability. Order now!</p>
+        <p className="mt-2">Limited availability. Order now!</p>
       </div>
 
       <div className="card_container mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {products.map((product) => (
-          <Link
-            to={`/product/${slugify(product.nama)}`}
-            key={product.id}
-            className="card cursor-pointer transition hover:scale-[1.02]"
-          >
+          <div className="card" key={product.id}>
             <div className="img h-48 lg:h-80">
               <img
                 className="h-full w-full object-cover"
@@ -44,18 +32,14 @@ const BestSeller = () => {
               />
             </div>
             <div className="deskripsi mt-2">
-              <h3 className="font-bold dark:text-white">{product.nama}</h3>
-              <p className="dark:text-white/80">
-                Rp {product.harga.toLocaleString()}
-              </p>
+              <h3 className="font-bold">{product.nama}</h3>
+              <p>Rp {product.harga.toLocaleString()}</p>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
-      <button className="mx-auto mt-8 block border px-12 py-4 dark:text-white">
-        View All
-      </button>
+      <button className="mx-auto mt-8 block border px-12 py-4">View All</button>
     </div>
   );
 };

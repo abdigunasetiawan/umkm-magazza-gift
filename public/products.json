@@ -13,7 +13,7 @@
     },
     {
       "id": 14,
-      "nama": " Scarlet Whisper Bouqet",
+      "nama": "Scarlet Whisper Bouqet",
       "tipe": "b  ouqet bunga artificial",
       "harga": 100000,
       "gambar": "bouqet_mawar_merah.jpg",
@@ -57,7 +57,7 @@
     },
     {
       "id": 11,
-      "nama": " Crimson Heart Bouqet",
+      "nama": "Crimson Heart Bouqet",
       "tipe": "bouqet bunga asli",
       "harga": 100000,
       "gambar": "bouqet_mawar.jpg",
@@ -169,7 +169,7 @@
     },
     {
       "id": 10,
-      "nama": " Golden Glow Bouqet",
+      "nama": "Golden Glow Bouqet",
       "tipe": "bouqet coklat",
       "harga": 100000,
       "gambar": "bouqet_matahari_coklat.jpg",
@@ -246,7 +246,7 @@
     },
     {
       "id": 17,
-      "nama": " Tender Harmony  Bouqet",
+      "nama": "Tender Harmony  Bouqet",
       "tipe": "bouqet bunga artificial",
       "harga": 100000,
       "gambar": "bouqet_pink_putih.jpg",

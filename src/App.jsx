@@ -4,6 +4,7 @@ import Home from "./pages/home/App";
 import Detail from "./pages/detailProduct/App";
 import SearchPage from "./pages/searchProduct/App";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   useEffect(() => {
@@ -25,7 +26,8 @@ const App = () => {
 
   return (
     <Router>
-      <div className="font-inter relative pb-96">
+      <ScrollToTop />
+      <div className="font-inter relative dark:bg-gray-900">
         <Navbar toggleDarkMode={toggleDarkMode} />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const AllProduct = () => {
   const [products, setProducts] = useState([]);
@@ -9,18 +8,11 @@ const AllProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         const allProducts = data.allProducts;
-        const latest = allProducts.slice(-12); // Ambil 12 data terakhir
+        const latest = allProducts.slice(-12); // Ambil 4 data terakhir
         setProducts(latest);
       })
       .catch((err) => console.error("Gagal memuat data:", err));
   }, []);
-
-  // Fungsi untuk membuat slug dari nama produk
-  const slugify = (text) =>
-    text
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]+/g, "");
 
   return (
     <div className="mx-auto mt-4 max-w-screen-xl p-4">
@@ -30,11 +22,7 @@ const AllProduct = () => {
 
       <div className="card_container mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         {products.map((product) => (
-          <Link
-            to={`/product/${slugify(product.nama)}`}
-            key={product.id}
-            className="card block cursor-pointer transition hover:scale-[1.02]"
-          >
+          <div className="card" key={product.id}>
             <div className="img h-48 lg:h-80">
               <img
                 className="h-full w-full object-cover"
@@ -43,18 +31,14 @@ const AllProduct = () => {
               />
             </div>
             <div className="deskripsi mt-2">
-              <h3 className="font-bold dark:text-white">{product.nama}</h3>
-              <p className="dark:text-white/80">
-                Rp {product.harga.toLocaleString()}
-              </p>
+              <h3 className="font-bold">{product.nama}</h3>
+              <p>Rp {product.harga.toLocaleString()}</p>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
-      <button className="mx-auto mt-8 block border px-12 py-4 dark:text-white">
-        View All
-      </button>
+      <button className="mx-auto mt-8 block border px-12 py-4">View All</button>
     </div>
   );
 };
