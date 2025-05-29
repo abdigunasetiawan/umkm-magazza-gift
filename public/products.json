@@ -1,0 +1,303 @@
+{
+  "popularProducts": [
+    {
+      "id": 5,
+      "nama": "Fluffy Bloom Bouqet",
+      "tipe": "bouqet boneka",
+      "harga": 100000,
+      "gambar": "bouqet_boneka_bunga.jpg",
+      "warna": ["pink", "hitam"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "Kombinasi hangat antara boneka imut dan bunga cantik. Hadiah yang menyentuh dan cocok untuk merayakan hari jadi atau Hari Valentine.",
+      "link_instagram": "https://www.instagram.com/p/DFlxu7aB203/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 14,
+      "nama": " Scarlet Whisper Bouqet",
+      "tipe": "b  ouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_mawar_merah.jpg",
+      "warna": ["merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Buket yang menyampaikan cinta lewat setiap kelopak. Hadiah romantis klasik yang tak pernah gagal menyentuh hati.",
+      "link_instagram": "https://www.instagram.com/p/DFMXL5ESFig/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 15,
+      "nama": "Blush Belle Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_mawar_pink.jpg",
+      "warna": ["pink"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "Buket mawar pink yang lembut dan anggun, menyampaikan rasa kagum dan kasih sayang. Cocok untuk ibu, saudari, atau sahabat perempuan.",
+      "link_instagram": "https://www.instagram.com/p/DF_uZMRy-jO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 20,
+      "nama": "Elegant Notes Bouqet",
+      "tipe": "bouqet uang",
+      "harga": 100000,
+      "gambar": "bouqet_uang1.jpg",
+      "warna": ["pink"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "Buket uang dengan desain wrapping yang lebih formal dan rapi. Cocok untuk acara spesial seperti pernikahan atau kenaikan jabatan.",
+      "link_instagram": "https://www.instagram.com/p/DJUXSYlyWd-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 2,
+      "nama": "Sunshine Medley Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 250000,
+      "gambar": "bouqet.jpg",
+      "warna": ["putih", "kuning", "merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "bouqet ceria dengan berbagai bunga warna-warni yang menghadirkan keceriaan dan kehangatan. Ideal untuk ulang tahun, perayaan, atau sekadar menyemangati hari seseorang.",
+      "link_instagram": "https://www.instagram.com/p/DANHlE_SSkW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 11,
+      "nama": " Crimson Heart Bouqet",
+      "tipe": "bouqet bunga asli",
+      "harga": 100000,
+      "gambar": "bouqet_mawar.jpg",
+      "warna": ["merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Rangkaian mawar merah yang elegan, simbol cinta dan gairah abadi. Cocok untuk hadiah romantis saat ulang tahun atau Hari Valentine.",
+      "link_instagram": "https://www.instagram.com/p/DGkDdJCSToO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    }
+  ],
+  "allProducts": [
+    {
+      "id": 1,
+      "nama": "Lily Charm Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 150000,
+      "gambar": "bouqet_artificial_lili.jpg",
+      "warna": ["merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "bouqet bunga ini menampilkan keindahan bunga lili dalam versi buatan (artificial) yang tahan lama. Dibuat dengan detail yang menyerupai aslinya, bunga lili ini tidak hanya cantik secara visual tetapi juga bebas perawatan,menjadikannya pilihan ideal untuk hadiah dekoratif atau pajangan ruangan. Cocok untuk ucapan terima kasih, perpisahan, atau sebagai pemanis ruang tamu dan meja kerja.",
+      "link_instagram": "https://www.instagram.com/p/DJlSrrLyoW8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 2,
+      "nama": "Sunshine Medley Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 250000,
+      "gambar": "bouqet.jpg",
+      "warna": ["putih", "kuning", "merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "bouqet ceria dengan berbagai bunga warna-warni yang menghadirkan keceriaan dan kehangatan. Ideal untuk ulang tahun, perayaan, atau sekadar menyemangati hari seseorang.",
+      "link_instagram": "https://www.instagram.com/p/DANHlE_SSkW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 3,
+      "nama": "Teddy Basket Bloom Bouqet",
+      "tipe": "bouqet bunga boneka",
+      "harga": 200000,
+      "gambar": "bouqet_boneka.jpg",
+      "warna": ["pink", "pastel"],
+      "tag": ["bouqet", "bunga", "boneka"],
+      "deskripsi": "Keranjang bunga cantik berisi rangkaian bunga artificial bernuansa lembut yang dipadukan dengan boneka teddy mungil di bagian tengah",
+      "link_instagram": "https://www.instagram.com/p/DFwmrl0yoZ2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 4,
+      "nama": "Cuddle Blossom Bouqet",
+      "tipe": "bouqet boneka",
+      "harga": 100000,
+      "gambar": "bouqet_boneka1.jpg",
+      "warna": ["merah", "pink"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "bouqet kecil yang penuh pesona, menggabungkan boneka mini dan bunga manis—sempurna untuk anak-anak, remaja, atau kejutan romantis yang playful..",
+      "link_instagram": "https://www.instagram.com/p/DFwmoOSSt37/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 5,
+      "nama": "Fluffy Bloom Bouqet",
+      "tipe": "bouqet boneka",
+      "harga": 100000,
+      "gambar": "bouqet_boneka_bunga.jpg",
+      "warna": ["pink", "hitam"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "Kombinasi hangat antara boneka imut dan bunga cantik. Hadiah yang menyentuh dan cocok untuk merayakan hari jadi atau Hari Valentine.",
+      "link_instagram": "https://www.instagram.com/p/DFlxu7aB203/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 6,
+      "nama": "Sweet Crush Bouqet",
+      "tipe": "bouqet coklat",
+      "harga": 100000,
+      "gambar": "bouqet_coklat3.jpg",
+      "warna": ["pink"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "Buket berisi aneka cokelat lezat yang ditata seperti bunga. Hadiah manis dan bergaya untuk Valentine atau perayaan cinta lainnya.",
+      "link_instagram": "https://www.instagram.com/p/DFlxu7aB203/?utm_source=ig_web_copy_link"
+    },
+    {
+      "id": 7,
+      "nama": "Garden Breeze Bouqet",
+      "tipe": "bouqet bunga asli",
+      "harga": 260000,
+      "gambar": "bouqet_fresh_flowers2.jpg",
+      "warna": ["pink", "putih"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Bunga segar pilihan yang dirangkai dengan nuansa alami. Ideal untuk momen penuh makna seperti menjenguk orang sakit, pernikahan, atau tanda terima kasih.",
+      "link_instagram": "https://www.instagram.com/p/DD8N3wXBFXB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 8,
+      "nama": "Blushing Petals Bouqet",
+      "tipe": "bouqet bunga asli",
+      "harga": 300000,
+      "gambar": "bouqet_fresh_flowers.jpg",
+      "warna": ["pink", "putih", "merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Buket bunga segar yang lebih mewah dengan sentuhan warna lembut. Cocok untuk ulang tahun pernikahan, lamaran, atau hadiah penuh cinta.",
+      "link_instagram": "https://www.instagram.com/p/DD8H4HnBP35/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 9,
+      "nama": "Snack Bloom Bouqet",
+      "tipe": "bouqet jajan",
+      "harga": 150000,
+      "gambar": "bouqet_jajan2.jpg",
+      "warna": [""],
+      "tag": ["bouqet", "jajan"],
+      "deskripsi": "Buket kreatif yang berisi jajanan ringan lokal dengan tampilan ceria. Cocok untuk hadiah ulang tahun, teman muda, atau kejutan menyenangkan.",
+      "link_instagram": "https://www.instagram.com/p/DIxr5XeSygX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 10,
+      "nama": " Golden Glow Bouqet",
+      "tipe": "bouqet coklat",
+      "harga": 100000,
+      "gambar": "bouqet_matahari_coklat.jpg",
+      "warna": ["kuning"],
+      "tag": ["bouqet", "coklat"],
+      "deskripsi": "Buket ceria dengan bunga matahari dan cokelat—melambangkan semangat, harapan, dan kasih sayang dalam satu paket bahagia.",
+      "link_instagram": "https://www.instagram.com/p/C-hBkSKy2JQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 11,
+      "nama": "Crimson Heart Bouqet",
+      "tipe": "bouqet bunga asli",
+      "harga": 100000,
+      "gambar": "bouqet_mawar.jpg",
+      "warna": ["merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Rangkaian mawar merah yang elegan, simbol cinta dan gairah abadi. Cocok untuk hadiah romantis saat ulang tahun atau Hari Valentine.",
+      "link_instagram": "https://www.instagram.com/p/DGkDdJCSToO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 12,
+      "nama": "Mystic Blue Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_mawar_biru.jpg",
+      "warna": ["biru"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Buket langka berisi mawar biru yang melambangkan keajaiban dan ketulusan. Cocok untuk orang spesial yang unik dalam hidupmu.",
+      "link_instagram": "https://www.instagram.com/p/DI4GWC8SuCp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 13,
+      "nama": "Black Velvet Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_mawar_hitam.jpg",
+      "warna": ["hitam"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Buket misterius dengan mawar hitam yang memukau. Melambangkan kekuatan dan keindahan yang tidak biasa—pilihan berani untuk hadiah istimewa.",
+      "link_instagram": "https://www.instagram.com/p/DDPk7HDy4ri/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 14,
+      "nama": "Scarlet Whisper Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_mawar_merah.jpg",
+      "warna": ["merah"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Buket yang menyampaikan cinta lewat setiap kelopak. Hadiah romantis klasik yang tak pernah gagal menyentuh hati.",
+      "link_instagram": "https://www.instagram.com/p/DFMXL5ESFig/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 15,
+      "nama": "Blush Belle Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_mawar_pink.jpg",
+      "warna": ["pink"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "Buket mawar pink yang lembut dan anggun, menyampaikan rasa kagum dan kasih sayang. Cocok untuk ibu, saudari, atau sahabat perempuan.",
+      "link_instagram": "https://www.instagram.com/p/DF_uZMRy-jO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 16,
+      "nama": "Celebration Sign Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_papan.jpg",
+      "warna": ["biru"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Buket bunga yang dilengkapi papan pesan. Ideal untuk wisuda, pembukaan usaha, atau ucapan selamat lainnya yang lebih personal.",
+      "link_instagram": "https://www.instagram.com/p/DI5QwQryeLg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 17,
+      "nama": " Tender Harmony  Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_pink_putih.jpg",
+      "warna": ["pink", "putih"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Perpaduan warna pink dan putih yang lembut, memberi kesan damai dan romantis. Cocok untuk pertunangan, pernikahan, atau baby shower.",
+      "link_instagram": "https://www.instagram.com/p/DE1gpb2SIfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 18,
+      "nama": "Royal Amethyst Bouqet",
+      "tipe": "bouqet bunga artificial",
+      "harga": 100000,
+      "gambar": "bouqet_pink_ungu.jpg",
+      "warna": ["pink, ungu"],
+      "tag": ["bouqet", "bunga"],
+      "deskripsi": "Buket dengan kombinasi warna ungu dan pink yang elegan. Cocok untuk hadiah elegan atau momen romantis penuh kesan.",
+      "link_instagram": "https://www.instagram.com/p/DIk0BHQSYm6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 19,
+      "nama": "Money Bloom Bouqet",
+      "tipe": "bouqet uang",
+      "harga": 100000,
+      "gambar": "bouqet_uang.jpg",
+      "warna": ["hijau"],
+      "tag": ["bouqet", "uang"],
+      "deskripsi": "Uang yang dilipat artistik menyerupai bunga, memberi tampilan unik dan bermakna. Cocok untuk hadiah wisuda, ulang tahun, atau hadiah prestasi.",
+      "link_instagram": "https://www.instagram.com/p/DD8IiT-Bk7u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 20,
+      "nama": "Elegant Notes Bouqet",
+      "tipe": "bouqet uang",
+      "harga": 100000,
+      "gambar": "bouqet_uang1.jpg",
+      "warna": ["pink"],
+      "tag": ["bouqet", "boneka"],
+      "deskripsi": "Buket uang dengan desain wrapping yang lebih formal dan rapi. Cocok untuk acara spesial seperti pernikahan atau kenaikan jabatan.",
+      "link_instagram": "https://www.instagram.com/p/DJUXSYlyWd-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      "id": 21,
+      "nama": "Grace & Wealth Bouqet",
+      "tipe": "bouqet uang",
+      "harga": 100000,
+      "gambar": "bouqet_uang_bunga1.jpg",
+      "warna": ["biru"],
+      "tag": ["bouqet", "uang"],
+      "deskripsi": "Buket premium berisi uang dan bunga pastel yang disusun rapi. Hadiah mewah untuk pernikahan, ulang tahun penting, atau apresiasi penuh makna.",
+      "link_instagram": "https://www.instagram.com/p/DD8IiT-Bk7u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    }
+  ]
+}

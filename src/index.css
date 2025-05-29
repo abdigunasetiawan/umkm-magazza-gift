@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-cerise-50: #fff0f9;
+  --color-cerise-100: #ffe4f6;
+  --color-cerise-200: #ffc9ee;
+  --color-cerise-300: #ff9ddf;
+  --color-cerise-400: #ff60c7;
+  --color-cerise-500: #ff31ad;
+  --color-cerise-600: #f40e8a;
+  --color-cerise-700: #e50176;
+  --color-cerise-800: #b0045a;
+  --color-cerise-900: #92094d;
+  --color-cerise-950: #5a002b;
+  --font-inter: "Inter", "sans-serif";
+}
