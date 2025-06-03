@@ -5,6 +5,7 @@ import Detail from "./pages/detailProduct/App";
 import SearchPage from "./pages/searchProduct/App";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   useEffect(() => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/search/:keyword" element={<SearchPage />} />
         </Routes>
       </div>
+      <Analytics></Analytics>
     </Router>
   );
 };
