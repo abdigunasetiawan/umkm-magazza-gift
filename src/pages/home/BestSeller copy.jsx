@@ -39,7 +39,7 @@ const BestSeller = () => {
         ))}
       </div>
 
-      <button className="mx-auto mt-8 block border px-12 py-4">View All</button>
+      <button className="mx-auto mt-8 block border px-12 py-2">View All</button>
     </div>
   );
 };

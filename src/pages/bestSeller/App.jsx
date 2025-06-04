@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
+import BestSeller from "../home/BestSeller";
 import { Link } from "react-router-dom";
 
-const AllProduct = () => {
+const BestSellerPage = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("/products.json")
       .then((res) => res.json())
       .then((data) => {
-        const allProducts = data.allProducts;
-        const latest = allProducts.slice(-12); // Ambil 12 data terakhir
-        setProducts(latest);
+        const allProducts = data.popularProducts;
+        setProducts(allProducts);
       })
       .catch((err) => console.error("Gagal memuat data:", err));
   }, []);
 
-  // Fungsi untuk membuat slug dari nama produk
+  // Fungsi untuk menjadikan nama produk URL-friendly
   const slugify = (text) =>
     text
       .toLowerCase()
@@ -23,9 +23,9 @@ const AllProduct = () => {
       .replace(/[^\w-]+/g, "");
 
   return (
-    <div className="mx-auto mt-4 flex max-w-screen-xl flex-col items-center p-4">
+    <div className="mx-auto mt-[73px] flex max-w-screen-xl flex-col items-center p-4">
       <div className="text-center">
-        <h1 className="text-cerise-500 text-3xl font-bold">All Product</h1>
+        <h1 className="text-cerise-500 text-3xl font-bold">Best Products</h1>
       </div>
 
       <div className="card_container mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -33,7 +33,7 @@ const AllProduct = () => {
           <Link
             to={`/product/${slugify(product.nama)}`}
             key={product.id}
-            className="card block cursor-pointer transition hover:scale-[1.02]"
+            className="card cursor-pointer transition hover:scale-[1.02]"
           >
             <div className="img h-48 lg:h-80">
               <img
@@ -51,15 +51,8 @@ const AllProduct = () => {
           </Link>
         ))}
       </div>
-
-      <Link
-        to={`/all-products`}
-        className="mt-8 inline-block cursor-pointer border px-12 py-2.5 dark:text-white"
-      >
-        View All
-      </Link>
     </div>
   );
 };
 
-export default AllProduct;
+export default BestSellerPage;

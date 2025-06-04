@@ -23,7 +23,7 @@ const BestSeller = () => {
       .replace(/[^\w-]+/g, "");
 
   return (
-    <div className="mx-auto mt-4 max-w-screen-xl p-4">
+    <div className="mx-auto mt-4 flex max-w-screen-xl flex-col items-center p-4">
       <div className="text-center">
         <h1 className="text-cerise-500 text-3xl font-bold">Best Seller</h1>
         <p className="mt-2 dark:text-white">Limited availability. Order now!</p>
@@ -53,9 +53,12 @@ const BestSeller = () => {
         ))}
       </div>
 
-      <button className="mx-auto mt-8 block border px-12 py-4 dark:text-white">
+      <Link
+        to={`/best-seller`}
+        className="mt-8 inline-block cursor-pointer border px-12 py-2.5 dark:text-white"
+      >
         View All
-      </button>
+      </Link>
     </div>
   );
 };

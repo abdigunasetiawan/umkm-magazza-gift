@@ -5,7 +5,10 @@ import Detail from "./pages/detailProduct/App";
 import SearchPage from "./pages/searchProduct/App";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
+import BestSeller from "./pages/home/BestSeller";
 import { Analytics } from "@vercel/analytics/react";
+import BestSellerPage from "./pages/bestSeller/App";
+import AllProductPage from "./pages/allProduct/App";
 
 const App = () => {
   useEffect(() => {
@@ -32,6 +35,8 @@ const App = () => {
         <Navbar toggleDarkMode={toggleDarkMode} />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/best-seller/" element={<BestSellerPage />} />
+          <Route path="/all-products/" element={<AllProductPage />} />
           <Route path="/product/:namaProduct" element={<Detail />} />
           <Route path="/search/:keyword" element={<SearchPage />} />
         </Routes>
