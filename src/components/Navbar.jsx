@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ toggleDarkMode }) => {
   const [isDark, setIsDark] = useState(false);
@@ -33,36 +34,36 @@ const Navbar = ({ toggleDarkMode }) => {
         <div className="hidden w-full justify-center lg:order-1 lg:flex lg:w-auto">
           <ul className="flex space-x-8 font-medium rtl:space-x-reverse">
             <li>
-              <a
-                href="#"
+              <Link
+                to={`/category/artificial-flower`}
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
                 Artificial Flower
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to={`/category/fresh-flower`}
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
                 Fresh Flower
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to={`/category/teddy-bouquet`}
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
-                Teddy Bouquets
-              </a>
+                Teddy Bouquet
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to={`category/chocolate-bouquet`}
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
-                Chocolate Bouquets
-              </a>
+                Chocolate Bouquet
+              </Link>
             </li>
           </ul>
         </div>

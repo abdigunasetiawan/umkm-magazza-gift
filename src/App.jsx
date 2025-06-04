@@ -9,6 +9,7 @@ import BestSeller from "./pages/home/BestSeller";
 import { Analytics } from "@vercel/analytics/react";
 import BestSellerPage from "./pages/bestSeller/App";
 import AllProductPage from "./pages/allProduct/App";
+import CategoryProductPage from "./pages/category/App";
 
 const App = () => {
   useEffect(() => {
@@ -38,6 +39,10 @@ const App = () => {
           <Route path="/best-seller/" element={<BestSellerPage />} />
           <Route path="/all-products/" element={<AllProductPage />} />
           <Route path="/product/:namaProduct" element={<Detail />} />
+          <Route
+            path="/category/:namaCategory"
+            element={<CategoryProductPage />}
+          />
           <Route path="/search/:keyword" element={<SearchPage />} />
         </Routes>
       </div>
