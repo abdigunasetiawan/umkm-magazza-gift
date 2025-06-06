@@ -33,7 +33,7 @@ const Detail = () => {
   }
 
   return (
-    <div className="mx-auto mt-[73px] min-h-[calc(100dvh-73px)] max-w-screen-lg p-4 md:py-12">
+    <div className="mx-auto mt-[73px] min-h-[calc(100dvh-(73px+89px))] max-w-screen-lg p-4 md:py-12">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <img
           src={`/images/products/${product.gambar}`}
