@@ -29,7 +29,7 @@ const BestSeller = () => {
         <p className="mt-2 dark:text-white">Limited availability. Order now!</p>
       </div>
 
-      <div className="card_container mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="card_container mt-8 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
         {products.map((product) => (
           <Link
             to={`/product/${slugify(product.nama)}`}
@@ -55,7 +55,7 @@ const BestSeller = () => {
 
       <Link
         to={`/best-seller`}
-        className="mt-8 inline-block cursor-pointer border px-12 py-2.5 dark:text-white"
+        className="mt-8 inline-block cursor-pointer border px-12 py-2.5 transition-colors duration-150 hover:bg-black hover:text-white hover:transition-colors hover:duration-150 dark:text-white"
       >
         View All
       </Link>

@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Detail = () => {
+const CategoryProductPage = () => {
   const { namaCategory } = useParams();
   const [products, setProducts] = useState(null);
 
@@ -26,9 +26,9 @@ const Detail = () => {
           filteredProducts = data.allProducts.filter(
             (product) => product.tipe === "bouqet bunga asli",
           );
-        } else if (namaCategory === "teddy-bouquet") {
+        } else if (namaCategory === "money-bouquet") {
           filteredProducts = data.allProducts.filter(
-            (product) => product.tipe === "bouquet",
+            (product) => product.tipe === "bouqet uang",
           );
         } else if (namaCategory === "chocolate-bouquet") {
           filteredProducts = data.allProducts.filter(
@@ -50,7 +50,7 @@ const Detail = () => {
   }
 
   return (
-    <div className="mx-auto mt-[73px] flex max-w-screen-xl flex-col items-center p-4">
+    <div className="mx-auto mt-[73px] flex min-h-[calc(100vh-(73px+89px))] max-w-screen-xl flex-col items-center p-4">
       <div className="text-center">
         <h1 className="text-cerise-500 text-3xl font-bold capitalize">
           {namaCategory.replace("-", " ")}
@@ -84,4 +84,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+export default CategoryProductPage;

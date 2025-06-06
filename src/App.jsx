@@ -4,6 +4,7 @@ import Home from "./pages/home/App";
 import Detail from "./pages/detailProduct/App";
 import SearchPage from "./pages/searchProduct/App";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import BestSeller from "./pages/home/BestSeller";
 import { Analytics } from "@vercel/analytics/react";
@@ -45,6 +46,7 @@ const App = () => {
           />
           <Route path="/search/:keyword" element={<SearchPage />} />
         </Routes>
+        <Footer toggleDarkMode={toggleDarkMode} />
       </div>
       <Analytics></Analytics>
     </Router>

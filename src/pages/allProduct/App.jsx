@@ -9,7 +9,7 @@ const AllProductPage = () => {
     fetch("/products.json")
       .then((res) => res.json())
       .then((data) => {
-        const allProducts = data.popularProducts;
+        const allProducts = data.allProducts;
         setProducts(allProducts);
       })
       .catch((err) => console.error("Gagal memuat data:", err));

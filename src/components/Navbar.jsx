@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ toggleDarkMode }) => {
   const [isDark, setIsDark] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const darkMode = document.documentElement.classList.contains("dark");
@@ -19,13 +22,19 @@ const Navbar = ({ toggleDarkMode }) => {
     setIsOpen((prev) => !prev);
   };
 
+  const handleSearchKeyDown = (e) => {
+    if (e.key === "Enter" && searchQuery.trim() !== "") {
+      navigate(`/search/${encodeURIComponent(searchQuery.trim())}`);
+      setIsOpen(false); // Tutup menu jika mobile
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 z-20 mb-16 w-full border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-900">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
-        {/* Logo */}
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/logo.png" className="h-8" alt="Flowbite Logo" />
-          <span className="text-ceri text-cerise-600 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="text-cerise-600 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Magazza Gift
           </span>
         </a>
@@ -35,7 +44,7 @@ const Navbar = ({ toggleDarkMode }) => {
           <ul className="flex space-x-8 font-medium rtl:space-x-reverse">
             <li>
               <Link
-                to={`/category/artificial-flower`}
+                to="/category/artificial-flower"
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
                 Artificial Flower
@@ -43,7 +52,7 @@ const Navbar = ({ toggleDarkMode }) => {
             </li>
             <li>
               <Link
-                to={`/category/fresh-flower`}
+                to="/category/fresh-flower"
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
                 Fresh Flower
@@ -51,15 +60,15 @@ const Navbar = ({ toggleDarkMode }) => {
             </li>
             <li>
               <Link
-                to={`/category/teddy-bouquet`}
+                to="/category/money-bouquet"
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
-                Teddy Bouquet
+                Money Bouquet
               </Link>
             </li>
             <li>
               <Link
-                to={`category/chocolate-bouquet`}
+                to="/category/chocolate-bouquet"
                 className="hover:text-cerise-700 dark:hover:text-cerise-500 text-gray-900 hover:underline hover:underline-offset-8 dark:text-white"
               >
                 Chocolate Bouquet
@@ -68,9 +77,20 @@ const Navbar = ({ toggleDarkMode }) => {
           </ul>
         </div>
 
-        {/* Kanan: Dark mode, Search input, Hamburger */}
+        {/* Kanan */}
         <div className="flex items-center space-x-3 lg:order-2 rtl:space-x-reverse">
-          {/* Dark Mode Toggle */}
+          {/* Search Input */}
+          <div className="hidden lg:block">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleSearchKeyDown}
+              className="focus:border-cerise-500 focus:ring-cerise-500 dark:focus:border-cerise-500 dark:focus:ring-cerise-500 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+            />
+          </div>
+
           <button
             onClick={handleToggle}
             className="h-10 w-10 rounded-lg bg-gray-100 p-2 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
@@ -106,16 +126,7 @@ const Navbar = ({ toggleDarkMode }) => {
             )}
           </button>
 
-          {/* Search Input - tampil hanya di layar besar */}
-          <div className="hidden lg:block">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="focus:border-cerise-500 focus:ring-cerise-500 dark:focus:border-cerise-500 dark:focus:ring-cerise-500 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
-            />
-          </div>
-
-          {/* Hamburger Menu */}
+          {/* Hamburger */}
           <button
             onClick={handleMenuToggle}
             type="button"
@@ -141,7 +152,7 @@ const Navbar = ({ toggleDarkMode }) => {
         </div>
       </div>
 
-      {/* Menu navigasi mobile */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div
           className="border-t border-gray-200 bg-gray-50 lg:hidden dark:border-gray-700 dark:bg-gray-800"
@@ -149,46 +160,48 @@ const Navbar = ({ toggleDarkMode }) => {
         >
           <ul className="flex flex-col space-y-2 p-4 font-medium">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/category/artificial-flower"
                 className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 onClick={() => setIsOpen(false)}
               >
                 Artificial Flower
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/category/fresh-flower"
                 className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 onClick={() => setIsOpen(false)}
               >
                 Fresh Flower
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/category/money-bouquet"
                 className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 onClick={() => setIsOpen(false)}
               >
-                Teddy Bouquets
-              </a>
+                Money Bouquets
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/category/chocolate-bouquet"
                 className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 onClick={() => setIsOpen(false)}
               >
                 Chocolate Bouquets
-              </a>
+              </Link>
             </li>
-            {/* Input Search pada menu mobile */}
             <li>
               <input
                 type="text"
                 placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={handleSearchKeyDown}
                 className="focus:border-cerise-500 focus:ring-cerise-500 dark:focus:border-cerise-500 dark:focus:ring-cerise-500 w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               />
             </li>
