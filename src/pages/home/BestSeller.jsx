@@ -37,6 +37,7 @@ const BestSeller = () => {
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
         loop={true}
+        slidesPerView={2}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         breakpoints={{
           640: { slidesPerView: 2 },
