@@ -1,0 +1,25 @@
+/* Container pagination */
+.swiper-pagination {
+  bottom: -10px !important; /* posisi pagination */
+}
+
+.swiper-container {
+  padding-bottom: 32rem; /* beri ruang untuk pagination */
+}
+
+/* Dot pagination */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  opacity: 1;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Dot aktif */
+.swiper-pagination-bullet-active {
+  background-color: #e11d48; /* warna merah cerise (sesuaikan) */
+  border-color: #e11d48;
+  transform: scale(1.3);
+}
