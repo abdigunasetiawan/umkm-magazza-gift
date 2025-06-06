@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const CategoryProductPage = () => {
   const { namaCategory } = useParams();
   const [products, setProducts] = useState(null);
+  const [notFound, setNotFound] = useState(false);
 
   const slugify = (text) =>
     text
@@ -17,7 +18,6 @@ const CategoryProductPage = () => {
       .then((data) => {
         let filteredProducts = [];
 
-        // filter berdasarkan tipe kategori dari namaCategory
         if (namaCategory === "artificial-flower") {
           filteredProducts = data.allProducts.filter(
             (product) => product.tipe === "bouqet bunga artificial",
@@ -34,12 +34,34 @@ const CategoryProductPage = () => {
           filteredProducts = data.allProducts.filter(
             (product) => product.tipe === "bouqet coklat",
           );
+        } else {
+          setNotFound(true);
+          return;
         }
 
         setProducts(filteredProducts);
+        setNotFound(false);
       })
-      .catch((err) => console.error("Gagal memuat data:", err));
+      .catch((err) => {
+        console.error("Gagal memuat data:", err);
+        setNotFound(true);
+      });
   }, [namaCategory]);
+
+  if (notFound) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center px-4 text-center text-gray-800 dark:text-white">
+        <h1 className="mb-4 text-2xl font-bold">Kategori tidak ditemukan</h1>
+        <p className="mb-6">Kategori "{namaCategory}" tidak tersedia.</p>
+        <Link
+          to="/"
+          className="bg-cerise-600 hover:bg-cerise-700 rounded px-4 py-2 text-white transition"
+        >
+          Kembali ke Beranda
+        </Link>
+      </div>
+    );
+  }
 
   if (!products) {
     return (

@@ -7,6 +7,7 @@ const SearchPage = () => {
   const [products, setProducts] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const slugify = (text) =>
     text
@@ -18,21 +19,22 @@ const SearchPage = () => {
     const fetchProducts = async () => {
       try {
         const res = await fetch("/products.json");
-        let data = await res.json();
-        data = data.allProducts;
-        console.log(data);
+        const data = await res.json();
+        const allProducts = data.allProducts;
 
-        setProducts(data);
+        setProducts(allProducts);
 
         const keywordLower = keyword.toLowerCase();
-        const result = data.filter((item) =>
+        const result = allProducts.filter((item) =>
           item.nama.toLowerCase().includes(keywordLower),
         );
 
         setFiltered(result);
-        setLoading(false);
+        setError(result.length === 0);
       } catch (err) {
         console.error("Gagal mengambil produk:", err);
+        setError(true);
+      } finally {
         setLoading(false);
       }
     };
@@ -48,33 +50,40 @@ const SearchPage = () => {
     <div className="mx-auto mt-[73px] flex min-h-[calc(100vh-(73px+89px))] max-w-screen-xl flex-col items-center p-4">
       <div className="text-center">
         <h1 className="text-cerise-500 text-3xl font-bold">
-          Search result for {keyword}
+          Search result for "{keyword}"
         </h1>
       </div>
 
-      <div className="card_container mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {filtered.map((product) => (
-          <Link
-            to={`/product/${slugify(product.nama)}`}
-            key={product.id}
-            className="card cursor-pointer transition hover:scale-[1.02]"
-          >
-            <div className="img h-48 lg:h-80">
-              <img
-                className="h-full w-full object-cover"
-                src={`/images/products/${product.gambar}`}
-                alt={product.nama}
-              />
-            </div>
-            <div className="deskripsi mt-2">
-              <h3 className="font-bold dark:text-white">{product.nama}</h3>
-              <p className="dark:text-white/80">
-                Rp {product.harga.toLocaleString()}
-              </p>
-            </div>
-          </Link>
-        ))}
-      </div>
+      {error ? (
+        <p className="mt-8 text-center text-gray-600 dark:text-gray-300">
+          Produk dengan nama "<span className="font-semibold">{keyword}</span>"
+          tidak ditemukan.
+        </p>
+      ) : (
+        <div className="card_container mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {filtered.map((product) => (
+            <Link
+              to={`/product/${slugify(product.nama)}`}
+              key={product.id}
+              className="card cursor-pointer transition hover:scale-[1.02]"
+            >
+              <div className="img h-48 lg:h-80">
+                <img
+                  className="h-full w-full object-cover"
+                  src={`/images/products/${product.gambar}`}
+                  alt={product.nama}
+                />
+              </div>
+              <div className="deskripsi mt-2">
+                <h3 className="font-bold dark:text-white">{product.nama}</h3>
+                <p className="dark:text-white/80">
+                  Rp {product.harga.toLocaleString()}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,9 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Detail = () => {
   const { namaProduct } = useParams();
   const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   const slugify = (text) =>
     text
@@ -19,15 +21,38 @@ const Detail = () => {
         const foundProduct = allProducts.find(
           (p) => slugify(p.nama) === namaProduct,
         );
-        setProduct(foundProduct);
+        if (foundProduct) {
+          setProduct(foundProduct);
+        } else {
+          setNotFound(true);
+        }
+        setLoading(false);
       })
-      .catch((err) => console.error("Gagal memuat data:", err));
+      .catch((err) => {
+        console.error("Gagal memuat data:", err);
+        setNotFound(true);
+        setLoading(false);
+      });
   }, [namaProduct]);
 
-  if (!product) {
+  if (loading) {
     return (
       <div className="flex h-screen items-center justify-center text-xl text-gray-800 dark:text-gray-100">
         Memuat detail produk...
+      </div>
+    );
+  }
+
+  if (notFound) {
+    return (
+      <div className="flex h-screen flex-col items-center justify-center text-center text-xl text-gray-800 dark:text-gray-100">
+        <p>Produk tidak ditemukan.</p>
+        <Link
+          to="/"
+          className="bg-cerise-500 mt-4 rounded px-4 py-2 text-white transition hover:opacity-90"
+        >
+          Kembali ke Beranda
+        </Link>
       </div>
     );
   }
@@ -69,20 +94,6 @@ const Detail = () => {
               ))}
             </div>
           </div>
-
-          {/* 
-          <div>
-            <h3 className="mb-1 font-medium text-gray-600 dark:text-gray-400">Warna:</h3>
-            <div className="flex items-center gap-2">
-              {product.warna.map((warna, idx) => (
-                <span
-                  key={idx}
-                  className="h-6 w-6 rounded-full border dark:border-gray-600"
-                  style={{ backgroundColor: warna }}
-                />
-              ))}
-            </div>
-          </div> */}
 
           <div className="flex flex-wrap gap-3">
             <a
