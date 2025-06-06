@@ -25,7 +25,9 @@ const BestSellerPage = () => {
   return (
     <div className="mx-auto mt-[73px] flex max-w-screen-xl flex-col items-center p-4">
       <div className="text-center">
-        <h1 className="text-cerise-500 text-3xl font-bold">Best Products</h1>
+        <h1 className="text-cerise-500 text-3xl font-bold">
+          Best Seller Products
+        </h1>
       </div>
 
       <div className="card_container mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
